@@ -3,8 +3,15 @@ var chunks;
 var force;
 var windSpeed;
 
+var maxSize;
+
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+
+  //find the highr value
+  maxSize = windowWidth > windowHeight ? windowWidth : windowHeight;
+
+
   canvas.parent("sketch-holder")
   count = 350;
   chunks = [];
@@ -54,9 +61,9 @@ function createChunks(count) {
   // create a bunch of particle objects
   for (i = 0; i < count; i++) {
     var chunk = new Chunk();
-    chunk.positionX = random(-width / 3, width / 3);
-    chunk.positionY = random(-width / 3, width / 3);
-    chunk.positionZ = random(-width / 3, width / 3);
+    chunk.positionX = random(-maxSize / 3, maxSize / 3);
+    chunk.positionY = random(-maxSize / 3, maxSize / 3);
+    chunk.positionZ = random(-maxSize / 3, maxSize / 3);
     chunk.rotateX = random(0.001, 0.05);
     chunk.rotateY = random(0.001, 0.05);
     chunk.rotateZ = random(0.001, 0.05)  * chunk.positionZ * 0.005;
