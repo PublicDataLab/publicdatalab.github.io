@@ -1,82 +1,215 @@
-<!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
 
-	<head>
-		<meta charset="UTF-8">
-        <!-- Jquery -->
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/public_data_lab.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <!-- Local CSS -->
+  <link href="css/style.css" rel="stylesheet">
 
-		<!-- Bootstrap minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
 
-		<!-- Bootstrap Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-        <!-- Local CSS -->
-        <link href="css/style.css" rel="stylesheet">
+  <div id="sketch-holder" width="100%" height="100%"></div>
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	</head>
-	<body>
-    <nav class="navbar-custom navbar-fixed-top nav-up" role="navigation">
-        <div class="container-fluid container-navbar">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-            </div>
+  <div class="tilt" data-tilt data-tilt-max="20" data-tilt-speed="1400" data-tilt-scale="1.05" data-tilt-perspective="800">
+    <p>Pd</p>
+  </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div id="navbar-spy" class="collapse navbar-collapse navbar-main-collapse">
+  <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
 
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li>
-                        <a href="#intro">Overview</a>
-                    </li>
-                    <li>
-                        <a href="#places">What we do</a>
-                    </li>
-                    <li>
-                        <a href="#groups">About us</a>
-                    </li>
-                    <li>
-                        <a href="#victims">Coordinators</a>
-                    </li>
-                </ul>
-
-            </div>
-            <!-- /.navbar-collapse -->
-            <div id="intro">
-                <p>
-                    The Public Data Lab seeks to facilitate <em>research, democratic engagement and public debate</em> around the <em>future of the data society.</em></p>
-                <p>
-                    We want to develop and disseminate innovative research, teaching, design and participation formats for the creation and use of public data.
-                </p>
-                <p>
-                    We work in collaboration with an interdisciplinary network of researchers, practitioners, journalists, civil society groups, designers, developers and public institutions across the world.
-                </p>
-                <p>
-                    Our approach characterized by an interest in:
-                    <ul>
-                        <li>
-                            <em>Intervention</em> around social, political, economic and ecological issues;
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a class="page-scroll" href="#page-top"></a>
                         </li>
                         <li>
-                            Participation through involving different publics in the co-design of our work;
+                            <a class="page-scroll" href="#intro">Overview</a>
                         </li>
                         <li>
-                            Artisanship in advancing the craft of developing data projects and experiences;
+                            <a class="page-scroll" href="#what-we-do">What we do</a>
                         </li>
                         <li>
-                            Openness in sharing our research, data and code for all to use.
+                            <a class="page-scroll" href="#about-us">About Us</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#coordinators">Coordinators</a>
                         </li>
                     </ul>
-                </p>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+        <!-- INTRO -->
+        <div id="intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>
+                            The Public Data Lab seeks to facilitate <em>research, democratic engagement and public debate</em> around the <em>future of the data society.</em></p>
+                        <p>
+                            We want to develop and disseminate innovative research, teaching, design and participation formats for the creation and use of public data.
+                        </p>
+                        <p>
+                            We work in collaboration with an interdisciplinary network of researchers, practitioners, journalists, civil society groups, designers, developers and public institutions across the world.
+                        </p>
+                        <p>
+                            Our approach characterized by an interest in:
+                            <ul>
+                                <li>
+                                    <em>Intervention</em> around social, political, economic and ecological issues;
+                                </li>
+                                <li>
+                                    Participation through involving different publics in the co-design of our work;
+                                </li>
+                                <li>
+                                    Artisanship in advancing the craft of developing data projects and experiences;
+                                </li>
+                                <li>
+                                    Openness in sharing our research, data and code for all to use.
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- /.container -->
-    </nav>			
-	</body>
+
+        <!-- WHAT WE DO -->
+        <div id="what-we-do">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>What we do</h1>
+                        <ul>
+                            <li>
+                                Undertake exemplary research and data projects;
+                            </li>
+                            <li>
+                                Foster awareness and critical reflection on data infrastructures;
+                            </li>
+                            <li>
+                                Promote public understanding and engagement with data politics;
+                            </li>
+                            <li>
+                                Advance digital methods, tools and code;
+                            </li>
+                            <li>
+                                Develop participatory design methods;
+                            </li>
+                            <li>
+                                Catalyse transnational and transdisciplinary collaborations;
+                            </li>
+                            <li>
+                                Map and facilitate the translation of data practices between domains.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT US -->
+        <div id="about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>About us</h1>
+                        <p>
+                            A mirage is shimmering across the world: the hope that the advent of massive digitisation and datafication will enable evidence-based policy-making and the effective public management of all uncertainties and challenges. This hope is not new. It dates back to the invention of statistics and has surfaced again and again every time technical innovation has supplied new information on collective life.
+                        </p>
+                        <p>
+                            Yet, as policymakers know all too well, this hope is misplaced. The problem of governance is seldom the lack of information. Living together is difficult not because we ignore what others do or want, but because we have different aspirations, interests and visions. More data, no matter how big or smart, will not make the task of composing our diverging interests any easier.
+                        </p>
+                        <p>
+                            This does not mean, of course, that there is no political use for digital technologies. It means that they can have more uses than we imagine. Massive datasets and sophisticated models are not the only tools digital technologies can offer. These technologies also facilitate the traceability of social phenomena and open up new ways to map different different kinds of political agendas and to expose them to public investigation.
+                        </p>
+                        <p>
+                            The Public Data Lab develops collaborative research, teaching, design and participation formats to facilitate societal debates through digital technologies. It holds that data should not be used to close the discussion, but to open spaces for deliberation, engagement and contestation. Data analysis is not a magic bullet, nor an inexhaustible source of consensus and rational decision-making. Rather, it is rather a heterogeneous ensemble of experimental and tentative techniques to explore and chart our divergences. Not necessarily to solve them, but at least to make them more legible.
+                        </p>
+                        <p>
+                            In our data-sprints, issue experts, researchers, developers and designers collaborate with the representatives of different civic constituencies to develop debatable data, digital methods and public spaces around the infrastructures of data and processes of datafication.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- coordinators -->
+        <div id="coordinators">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Coordinators</h1>
+                        <ol>
+                            <li>
+                                Tobias Blanke, Digital Humanities Department, King’s College London (UK)
+                            </li>
+                            <li>
+                                Liliana Bounegru, University of Ghent + University of Groningen (Netherlands)
+                            </li>
+                            <li>
+                                Carolin Gerlitz, University of Siegen (Germany)
+                            </li>
+                            <li>
+                                Jonathan Gray, Institute for Policy Research, University of Bath (UK)
+                            </li>
+                            <li>
+                                Mathieu Jacomy, médialab, Sciences Po Paris (France)
+                            </li>
+                            <li>
+                                Lucy Kimbell, University of the Arts London (UK)
+                            </li>
+                            <li>
+                                Anders Koed Madsen, Techno-Anthropology Lab, Aalborg University Copenhagen (Denmark)
+                            </li>
+                            <li>
+                                Michele Mauri, Density Design, Politecnico of Milano (Italy)
+                            </li>
+                            <li>
+                                Anders Munk, Techno-Anthropology Lab, Aalborg University Copenhagen (Denmark)
+                            </li>
+                            <li>
+                                Sabine Niederer, Citizen Data Lab, Amsterdam University of Applied Sciences (Netherlands)
+                            </li>
+                            <li>
+                                Kari de Pryck, Global Study Institute, Université de Genève (Switzerland)
+                            </li>
+                            <li>
+                                Richard Rogers, Digital Methods Initiative, University of Amsterdam (Netherlands)
+                            </li>
+                            <li>
+                                Alvaro Pina Stranger, Université de Rennes 1 (France)
+                            </li>
+                            <li>
+                                Tommaso Venturini, Institute of Complex Systems, INRIA (France)
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+  <script type="text/javascript" src="https://cdn.rawgit.com/micku7zu/vanilla-tilt.js/master/dist/vanilla-tilt.min.js"></script>
+</body>
 </html>
