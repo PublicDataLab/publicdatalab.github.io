@@ -23,7 +23,7 @@ function setup() {
 }
 
 function draw() {
-  background(235, 255, 0);
+  //background(235, 255, 0);
   handleEnvironment();
   for (i = 0; i < count; i++) {
     push();
