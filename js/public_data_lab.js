@@ -31,7 +31,7 @@ function draw() {
     }*/
     rotateY(frameCount * windSpeed * dist(0, 0, 0, chunks[i].positionX, chunks[i].positionY, chunks[i].positionZ));
     translate(chunks[i].positionX - force * 0.0001, chunks[i].positionY - force * 0.001, chunks[i].positionZ);
-    fill(color(55, 0, 60));
+    fill(color(55, 0, 60,100));
     rotateX(frameCount * chunks[i].rotateX);
     rotateY(frameCount * chunks[i].rotateY);
     rotateZ(frameCount * chunks[i].rotateZ);
@@ -60,7 +60,7 @@ function createChunks(count) {
     chunk.rotateX = random(0.001, 0.05);
     chunk.rotateY = random(0.001, 0.05);
     chunk.rotateZ = random(0.001, 0.05)  * chunk.positionZ * 0.005;
-    chunk.size = random(2, 10);
+    chunk.size = random(1, 5);
     chunks[i] = chunk;
   }
 }
