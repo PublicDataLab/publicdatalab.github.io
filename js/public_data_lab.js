@@ -2,7 +2,11 @@ var count;
 var chunks;
 var force;
 var windSpeed;
+var maxWind;
+var minWind;
+var particlesAlpha;
 
+var curSize;
 var maxSize;
 
 function setup() {
@@ -10,39 +14,66 @@ function setup() {
 
   //find the highr value
   maxSize = windowWidth > windowHeight ? windowWidth : windowHeight;
+  //set current size to max
+  curSize = maxSize;
 
 
   canvas.parent("sketch-holder")
   count = 350;
   chunks = [];
-  force = 0;
+  //horizontal spinning
   windSpeed = 0.000005;
+  minWind = 0.000005;
+  maxWind = 0.05
+
+  //
+  particlesAlpha = 100;
   createChunks(count);
   this.mouseX = mouseX + width / 2;
   this.mouseY = mouseY + height / 2;
 }
 
 function draw() {
-  //background(235, 255, 0);
-  handleEnvironment();
-  for (i = 0; i < count; i++) {
-    push();
-    /*
-    if (mouseIsPressed) {
-      windSpeed += 0.000000001;
-      force++;
+
+  console.log(touches.length);
+  
+  if(mouseIsPressed || touches.length > 0) {
+
+    if(curSize > 0.1) {
+      curSize --;
+      windSpeed += 0.0000001;
+      particlesAlpha += 0.5
     }
-    else if (windSpeed >= 0.000005) {
-      // windSpeed -= 0.0000000001;
-      force--;
-    }*/
-    rotateY(frameCount * windSpeed * dist(0, 0, 0, chunks[i].positionX, chunks[i].positionY, chunks[i].positionZ));
-    translate(chunks[i].positionX - force * 0.0001, chunks[i].positionY - force * 0.001, chunks[i].positionZ);
-    fill(color(55, 0, 60,100));
-    rotateX(frameCount * chunks[i].rotateX);
-    rotateY(frameCount * chunks[i].rotateY);
-    rotateZ(frameCount * chunks[i].rotateZ);
-    plane(chunks[i].size);
+
+  } else {
+
+    if(curSize < maxSize) {
+      curSize += 2;
+      windSpeed -= 0.0000002;
+      particlesAlpha -= 1;
+    }
+  };
+
+  //define distance scale
+  var distScale = curSize/maxSize;
+
+  handleEnvironment();
+  //for each particle set the position 
+  for (i = 0; i < chunks.length; i++) {
+
+    var chunk = chunks[i];
+    push();
+    //increase rotation according to wind speed
+    chunk.rotation += windSpeed
+    //rotate the axis according the rotation values modified by distance
+    rotateY(chunk.rotation * dist(0, 0, 0, chunk.positionX, chunk.positionY, chunk.positionZ));
+    //move to position
+    translate(chunk.positionX * distScale, chunk.positionY * distScale, chunk.positionZ * distScale);
+    fill(color(55, 0, 60, particlesAlpha));
+    rotateX(frameCount * chunk.rotateX);
+    rotateY(frameCount * chunk.rotateY);
+    rotateZ(frameCount * chunk.rotateZ);
+    plane(chunk.size);
     pop();
   }
 }
@@ -54,6 +85,8 @@ function Chunk() {
   this.rotateX;
   this.rotateY;
   this.rotateZ;
+  //
+  this.rotation;
   this.size;
 }
 
@@ -68,6 +101,7 @@ function createChunks(count) {
     chunk.rotateY = random(0.001, 0.05);
     chunk.rotateZ = random(0.001, 0.05)  * chunk.positionZ * 0.005;
     chunk.size = random(1, 5);
+    chunk.rotation = 0;
     chunks[i] = chunk;
   }
 }
@@ -95,28 +129,3 @@ function handleEnvironment() {
   var cameraZ = (height / 2.0) / tan(PI / 3 / 2.0);
   perspective(PI / 3, width / height, cameraZ / 10.0, cameraZ * 10.0);
 }
-
-// function activateVaccuum() {
-//   for (i = 0; i < count; i++) {
-//     if (mouseX - width / 2 < chunks[i].positionX) {
-//       chunks[i].positionX -= 5;
-//     } else {
-//       chunks[i].positionX += 5;
-//     }
-//     if (mouseY - height / 2 < chunks[i].positionY) {
-//       chunks[i].positionY -= 5;
-//     } else {
-//       chunks[i].positionY += 5;
-//     }
-//     chunks[i].positionZ;
-//   }
-// }
-
-// function mouseMoved() {
-//   this.rotateX(mouseY * -0.0005);
-//   this.rotateY(mouseX * -0.0005);
-// }
-//
-// function deviceMoved() {
-//
-// }
