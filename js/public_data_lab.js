@@ -12,8 +12,10 @@ var maxSize;
 function setup() {
   var canvas = createCanvas(windowWidth, windowHeight, WEBGL);
 
-  //find the highr value
+  //find the highest value
   maxSize = windowWidth > windowHeight ? windowWidth : windowHeight;
+  //increase max size by 1.5
+  maxSize *= 1.5;
   //set current size to max
   curSize = maxSize;
 
@@ -35,13 +37,13 @@ function setup() {
 
 function draw() {
 
-  console.log(touches.length);
+  //console.log(touches.length);
   
-  if(mouseIsPressed || touches.length > 0) {
+  if((mouseIsPressed && mouseButton == LEFT) || touches.length > 0) {
 
     if(curSize > 0.1) {
       curSize --;
-      windSpeed += 0.0000001;
+      windSpeed += 0.00000015;
       particlesAlpha += 0.5
     }
 
@@ -49,7 +51,7 @@ function draw() {
 
     if(curSize < maxSize) {
       curSize += 2;
-      windSpeed -= 0.0000002;
+      windSpeed -= 0.0000003;
       particlesAlpha -= 1;
     }
   };
