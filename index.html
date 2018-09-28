@@ -3,336 +3,408 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Public Data Lab</title>
-    <link rel="icon" type="image/png" href="imgs/favicon.png">
+	<title>Public Data Lab</title>
+	<link rel="icon" type="image/png" href="imgs/favicon.png">
 
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#101200">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#101200">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#101200">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#101200">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#101200">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#101200">
 
-    <meta name="author" content="Public Data Lab">
-    <meta name="description" content="The Public Data Lab seeks to facilitate research, democratic engagement and public debate around the future of the data society. We want to develop and disseminate innovative research, teaching, design and participation formats for the creation and use of public data.">
+	<meta name="author" content="Public Data Lab">
+	<meta name="description" content="The Public Data Lab seeks to facilitate research, democratic engagement and public debate around the future of the data society. We want to develop and disseminate innovative research, teaching, design and participation formats for the creation and use of public data.">
 
-    <!-- Social Networks meta tags -->
-    <meta property="og:title" content="Public Data Lab">
-    <meta property="og:description" content="The Public Data Lab seeks to facilitate research, democratic engagement and public debate around the future of the data society. We want to develop and disseminate innovative research, teaching, design and participation formats for the creation and use of public data.">
-    <meta property="og:image" content="http://publicdatalab.org/imgs/cover.png">
-    <meta property="og:image:width" content="2880">
-    <meta property="og:image:height" content="1525">
-    <meta property="og:url" content="http://publicdatalab.org/">
-    <meta name="twitter:card" content="summary_large_image">
+	<!-- Social Networks meta tags -->
+	<meta property="og:title" content="Public Data Lab">
+	<meta property="og:description" content="The Public Data Lab seeks to facilitate research, democratic engagement and public debate around the future of the data society. We want to develop and disseminate innovative research, teaching, design and participation formats for the creation and use of public data.">
+	<meta property="og:image" content="http://publicdatalab.org/imgs/cover.png">
+	<meta property="og:image:width" content="2880">
+	<meta property="og:image:height" content="1525">
+	<meta property="og:url" content="http://publicdatalab.org/">
+	<meta name="twitter:card" content="summary_large_image">
 
 
 
-  <script type="text/javascript" src="js/public_data_lab.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js"></script>
+	<script type="text/javascript" src="js/public_data_lab.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js"></script>
 
-  <!-- Bootstrap Core CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <!-- Custom CSS -->
-  <link href="css/style.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel="stylesheet">
 
-  <!-- Google fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+	<!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
 
-  <!-- Font Awesome-->
-  <script src="https://use.fontawesome.com/13f37b7913.js"></script>
+	<!-- Font Awesome-->
+	<script src="https://use.fontawesome.com/13f37b7913.js"></script>
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-  <!-- Background sketch -->
-  <div id="sketch-holder" width="100%" height="100%"></div>
+	<!-- Background sketch -->
+	<div id="sketch-holder" width="100%" height="100%"></div>
 
-  <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	<!-- Navigation -->
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                </div>
+			</div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav">
-                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                        <li class="hidden">
-                            <a class="page-scroll" href="#page-top"></a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#intro">Overview</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#what-we-do">What we do</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#about-us">About Us</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#coordinators">Coordinators</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+					<li class="hidden">
+						<a class="page-scroll" href="#page-top"></a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#intro">Overview</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#what-we-do">What we do</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#about-us">About Us</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="#coordinators">Coordinators</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
 
-        <!-- INTRO -->
-        <div id="intro">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-2 col-xs-8">
-                        <!--<p class = "pdl-logo">Public Data Lab</p>-->
+	<!-- INTRO -->
+	<div id="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-md-offset-2 col-xs-8">
+					<!--<p class = "pdl-logo">Public Data Lab</p>-->
 
-                        <img class = "pdl-logo" src="imgs/publicdatalab-logo.svg"/>
+					<img class = "pdl-logo" src="imgs/publicdatalab-logo.svg"/>
                     </div>
 
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 col-sm-12">
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12">
 
-                        <p>
-                            The Public Data Lab seeks to facilitate <em>research, democratic engagement and public debate</em> around the <em>future of the data society.</em></p>
-                        <p>
-                            We want to develop and disseminate <em>innovative research, teaching, design and participation formats</em> for the <em>creation and use of public data</em>.
-                        </p>
-                        <p>
-                            We work in collaboration with an <em>interdisciplinary network</em> of researchers, practitioners, journalists, civil society groups, designers, developers and public institutions across the world.
-                        </p>
-                        <p>
-                            Our approach characterized by an interest in:
-                            <ul>
-                                <li>
-                                    <em>Intervention</em> around social, political, economic and ecological issues;
-                                </li>
-                                <li>
-                                    <em>Participation</em> through involving different publics in the co-design of our work;
-                                </li>
-                                <li>
-                                    <em>Artisanship</em> in advancing the craft of developing data projects and experiences;
-                                </li>
-                                <li>
-                                    <em>Openness</em> in sharing our research, data and code for all to use.
-                                </li>
-                            </ul>
-                        </p>
+						<p>
+							The Public Data Lab seeks to facilitate <em>research, democratic engagement and public debate</em> around the <em>future of the data society.</em></p>
+						<p>
+							We want to develop and disseminate <em>innovative research, teaching, design and participation formats</em> for the <em>creation and use of public data</em>.
+						</p>
+						<p>
+							We work in collaboration with an <em>interdisciplinary network</em> of researchers, practitioners, journalists, civil society groups, designers, developers and public institutions across the world.
+						</p>
+						<p>
+							Our approach characterized by an interest in:
+							<ul>
+								<li>
+									<em>Intervention</em> around social, political, economic and ecological issues;
+								</li>
+								<li>
+									<em>Participation</em> through involving different publics in the co-design of our work;
+								</li>
+								<li>
+									<em>Artisanship</em> in advancing the craft of developing data projects and experiences;
+								</li>
+								<li>
+									<em>Openness</em> in sharing our research, data and code for all to use.
+								</li>
+							</ul>
+						</p>
 
-                    </div>
-                </div>
-            </div>
-        </div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12">
+						<p>You can also follow us on: </p>
+						<p class="social-media">
+							<a href="https://twitter.com/publicdatalab"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a> | <a href="https://github.com/PublicDataLab"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- projects -->
+		<div id="projects">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12">
+						<h1>Projects</h1>
+						<p>
+							these are the projects developed so far by the lab.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3 col-sm-6">
+						<a href="https://fakenews.publicdatalab.org/">
+							<img src=imgs/projects/fake-news.png>
+							A Field Guide to Fake News
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<a href="http://saveourair.publicdatalab.org">
+								<img src=imgs/projects/save-our-air.png>
+								Save Our Air
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<a href="https://twitter.com/PublicDataLab/status/994564095616667649">
+							<img src=imgs/projects/tracing-public-facts.png>
+							Tracing Public Facts
+						</a>
+					</div>
+					<div class="col-md-3 col-sm-6">
+						<a href="http://datajournalismhandbook.org/ ">
+							<img src=imgs/projects/data-journalism-handbook.png>
+							Data Journalism Handbook
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- FOLLOW US -->
-        <div id="follow-us">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 col-sm-12">
-                        <h1>Keep in touch</h1>
-                        <p>
-                            Sign up below to get updates about our projects and activities.
-                        </p>
-                    </div>
-                </div>
-                <!-- Mailchimp code -->
-                <div class="row">
-                    <div class="col-md-4 col-md-offset-2 col-sm-12">
-                        <div id="mc_embed_signup">
-                            <form action="//publicdatalab.us14.list-manage.com/subscribe/post?u=d40e560175082c95b321ed8e3&amp;id=3fd6102ab0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                <div id="mc_embed_signup_scroll">
-                                    <div class="mc-field-group">
-                                        <label for="mce-EMAIL">Email Address</label>
-                                        <input type="email" value="" name="EMAIL" class="mailchimp-fields" class="required email" id="mce-EMAIL" placeholder="Enter your email address...">
-                                    </div>
-                                    <div class="mc-field-group">
-                                        <label for="mce-FNAME">First Name </label>
-                                        <input type="text" value="" name="FNAME" class="mailchimp-fields" id="mce-FNAME" placeholder="Your first name">
-                                    </div>
-                                    <div class="mc-field-group">
-                                        <label for="mce-LNAME">Last Name </label>
-                                        <input type="text" value="" name="LNAME" class="mailchimp-fields" id="mce-LNAME" placeholder="Your last name">
-                                    </div>
-                                    <div id="mce-responses" class="clear">
-                                        <div class="response" id="mce-error-response" style="display:none"></div>
-                                        <div class="response" id="mce-success-response" style="display:none"></div>
-                                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d40e560175082c95b321ed8e3_3fd6102ab0" tabindex="-1" value=""></div>
-                                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                                </div>
-                            </form>
-                        </div>
-                        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-                        <!--End mc_embed_signup-->
-                    </div>
-                </div>
-                <!-- Mailchimp end -->
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 col-sm-12">
-                        <p>You can also follow us on: </p>
-                        <p class="social-media">
-                            <a href="https://twitter.com/publicdatalab"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a> | <a href="https://github.com/PublicDataLab"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<!-- WHAT WE DO -->
+		<div id="what-we-do">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 offset-lg-3">
+						<h1>What we do</h1>
+						<ul>
+							<li>
+								Undertake exemplary research and data projects;
+							</li>
+							<li>
+								Foster awareness and critical reflection on data infrastructures;
+							</li>
+							<li>
+								Promote public understanding and engagement with data politics;
+							</li>
+							<li>
+								Advance digital methods, tools and code;
+							</li>
+							<li>
+								Develop participatory design methods;
+							</li>
+							<li>
+								Catalyse transnational and transdisciplinary collaborations;
+							</li>
+							<li>
+								Map and facilitate the translation of data practices between domains.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- WHAT WE DO -->
-        <div id="what-we-do">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3">
-                        <h1>What we do</h1>
-                        <ul>
-                            <li>
-                                Undertake exemplary research and data projects;
-                            </li>
-                            <li>
-                                Foster awareness and critical reflection on data infrastructures;
-                            </li>
-                            <li>
-                                Promote public understanding and engagement with data politics;
-                            </li>
-                            <li>
-                                Advance digital methods, tools and code;
-                            </li>
-                            <li>
-                                Develop participatory design methods;
-                            </li>
-                            <li>
-                                Catalyse transnational and transdisciplinary collaborations;
-                            </li>
-                            <li>
-                                Map and facilitate the translation of data practices between domains.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<!-- ABOUT US -->
+		<div id="about-us">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 offset-lg-3">
+						<h1>About us</h1>
+						<p>
+							A mirage is shimmering across the world: the hope that the advent of massive digitisation and datafication will enable evidence-based policy-making and the effective public management of all uncertainties and challenges. This hope is not new.
+							It dates back to the invention of statistics and has surfaced again and again every time technical innovation has supplied new information on collective life.
+						</p>
+						<p>
+							Yet, as policymakers know all too well, this hope is misplaced. The problem of governance is seldom the lack of information. Living together is difficult not because we ignore what others do or want, but because we have different aspirations,
+							interests and visions. More data, no matter how big or smart, will not make the task of composing our diverging interests any easier.
+						</p>
+						<p>
+							This does not mean, of course, that there is no political use for digital technologies. It means that they can have more uses than we imagine. Massive datasets and sophisticated models are not the only tools digital technologies can offer.
+							These technologies also facilitate the traceability of social phenomena and open up new ways to map different different kinds of political agendas and to expose them to public investigation.
+						</p>
+						<p>
+							The Public Data Lab develops collaborative research, teaching, design and participation formats to facilitate societal debates through digital technologies. It holds that data should not be used to close the discussion, but to open spaces for
+							deliberation, engagement and contestation. Data analysis is not a magic bullet, nor an inexhaustible source of consensus and rational decision-making. Rather, it is rather a heterogeneous ensemble of experimental and tentative techniques to
+							explore and chart our divergences. Not necessarily to solve them, but at least to make them more legible.
+						</p>
+						<p>
+							In our data-sprints, issue experts, researchers, developers and designers collaborate with the representatives of different civic constituencies to develop debatable data, digital methods and public spaces around the infrastructures of data
+							and processes of datafication.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- ABOUT US -->
-        <div id="about-us">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 offset-lg-3">
-                        <h1>About us</h1>
-                        <p>
-                            A mirage is shimmering across the world: the hope that the advent of massive digitisation and datafication will enable evidence-based policy-making and the effective public management of all uncertainties and challenges. This hope is not new. It dates back to the invention of statistics and has surfaced again and again every time technical innovation has supplied new information on collective life.
-                        </p>
-                        <p>
-                            Yet, as policymakers know all too well, this hope is misplaced. The problem of governance is seldom the lack of information. Living together is difficult not because we ignore what others do or want, but because we have different aspirations, interests and visions. More data, no matter how big or smart, will not make the task of composing our diverging interests any easier.
-                        </p>
-                        <p>
-                            This does not mean, of course, that there is no political use for digital technologies. It means that they can have more uses than we imagine. Massive datasets and sophisticated models are not the only tools digital technologies can offer. These technologies also facilitate the traceability of social phenomena and open up new ways to map different different kinds of political agendas and to expose them to public investigation.
-                        </p>
-                        <p>
-                            The Public Data Lab develops collaborative research, teaching, design and participation formats to facilitate societal debates through digital technologies. It holds that data should not be used to close the discussion, but to open spaces for deliberation, engagement and contestation. Data analysis is not a magic bullet, nor an inexhaustible source of consensus and rational decision-making. Rather, it is rather a heterogeneous ensemble of experimental and tentative techniques to explore and chart our divergences. Not necessarily to solve them, but at least to make them more legible.
-                        </p>
-                        <p>
-                            In our data-sprints, issue experts, researchers, developers and designers collaborate with the representatives of different civic constituencies to develop debatable data, digital methods and public spaces around the infrastructures of data and processes of datafication.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<!-- coordinators -->
+		<div id="coordinators">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12">
+						<h1>Lab Coordinators</h1>
 
-        <!-- coordinators -->
-        <div id="coordinators">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 col-sm-12">
-                        <h1>Lab Coordinators</h1>
+						<p>The Public Data Lab assembles through its projects, events and activities. It is coordinated by the following group of researchers. If you are interested in collaborating, please do <a href="mailto:contact@publicdatalab.org" target="_blank">get in touch</a>.</p>
 
-                        <p>The Public Data Lab assembles through its projects, events and activities. It is coordinated by the following group of researchers. If you are interested in collaborating, please do <a href="mailto:contact@publicdatalab.org" target="_blank">get in touch</a>.</p>
+						<ol>
+							<li>
+								<a href="http://www.kcl.ac.uk/artshums/depts/ddh/people/academic/blanke/Index.aspx" target="_blank">Tobias Blanke</a>, <a href="https://www.kcl.ac.uk/artshums/depts/ddh/index.aspx" target="_blank">Department for Digital Humanities</a>,
+								King’s College London (UK)
+							</li>
+							<li>
+								<a href="http://lilianabounegru.org/" target="_blank">Liliana Bounegru</a>, University of Ghent (BE) + University of Groningen (NL)
+							</li>
+							<li>
+								<a href="https://www.uni-siegen.de/phil/medienwissenschaft/personal/lehrende/gerlitz_carolin/" target="_blank">Carolin Gerlitz</a>, <a href="https://www.mediacoop.uni-siegen.de/en/" target="_blank">Media of Cooperation</a>, University of
+								Siegen (DE)
+							</li>
+							<li>
+								<a href="https://www.kcl.ac.uk/artshums/depts/ddh/people/academic/gray.aspx" target="_blank">Jonathan Gray</a>, <a href="https://www.kcl.ac.uk/artshums/depts/ddh/index.aspx" target="_blank">Department for Digital Humanities</a>, King's
+								College London (UK)
+							</li>
+							<li>
+								<a href="http://www.medialab.sciences-po.fr/people/mathieu-jacomy/" target="_blank">Mathieu Jacomy</a>, <a href="http://www.medialab.sciences-po.fr/" target="_blank">médialab</a>, Sciences Po Paris (FR)
+							</li>
+							<li>
+								<a href="http://www.arts.ac.uk/research/ual-staff-researchers/a-z/professor-lucy-kimbell/" target="_blank">Lucy Kimbell</a>, <a href="http://www.arts.ac.uk/research/ual-research-centres/innovation-insights-hub/" target="_blank">Innovation Insights Hub</a>,
+								University of the Arts London (UK)
+							</li>
+							<li>
+								<a href="http://personprofil.aau.dk/129860?lang=en#/minside" target="_blank">Anders Koed Madsen</a>, <a href="http://www.tantlab.aau.dk/" target="_blank">Techno-Anthropology Lab</a>, Aalborg University Copenhagen (DK)
+							</li>
+							<li>
+								<a href="https://www2.warwick.ac.uk/fac/cross_fac/cim/people/noortje-marres/" target="_blank">Noortje Marres</a>, <a href="http://www2.warwick.ac.uk/fac/cross_fac/cim/" target="_blank">Centre for Interdisciplinary Methodologies (CIM)</a>,
+								University of Warwick (UK)
+							</li>
+							<li>
+								<a href="http://www.densitydesign.org/person/michele-mauri/" target="_blank">Michele Mauri</a>, <a href="http://www.densitydesign.org/" target="_blank">Density Design</a>, Politecnico of Milano (IT)
+							</li>
+							<li>
+								<a href="http://vbn.aau.dk/en/persons/anders-kristian-munk(d276c50a-ef47-4fdf-be72-9fab31d7e8e7).html" target="_blank">Anders Munk</a>, <a href="http://www.tantlab.aau.dk/" target="_blank">Techno-Anthropology Lab</a>, Aalborg University
+								Copenhagen (DK)
+							</li>
+							<li>
+								<a href="http://www.niederer.info/" target="_blank">Sabine Niederer</a>, <a href="http://www.citizendatalab.org/" target="_blank">Citizen Data Lab</a>, Amsterdam University of Applied Sciences (NL)
+							</li>
+							<li>
+								<a href="https://unige.ch/gsi/fr/enseignants/cer/kari-de-pryck/" target="_blank">Kari de Pryck</a>, <a href="https://www.unige.ch/gsi/en/" target="_blank">Global Study Institute</a>, Université de Genève (CH)
+							</li>
+							<li>
+								<a href="http://www.uva.nl/over-de-uva/organisatie/medewerkers/content/r/o/r.a.rogers/r.a.rogers.html" target="_blank">Richard Rogers</a>, <a href="http://digitalmethods.net" target="_blank">Digital Methods Initiative</a>, University of
+								Amsterdam (NL)
+							</li>
+							<li>
+								<a href="https://twitter.com/alvpinastranger" target="_blank">Alvaro Pina Stranger</a>, Université de Rennes 1 (FR)
+							</li>
+							<li>
+								<a href="http://tommasoventurini.it" target="_blank">Tommaso Venturini</a>, <a href="http://www.ixxi.fr/" target="_blank">Institute of Complex Systems</a>, University of Lyon, INRIA, ENS de Lyon, CNRS, UCB Lyon 1 (FR)
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
 
-                        <ol>
-                            <li>
-                                <a href="http://www.kcl.ac.uk/artshums/depts/ddh/people/academic/blanke/Index.aspx" target="_blank">Tobias Blanke</a>, <a href="https://www.kcl.ac.uk/artshums/depts/ddh/index.aspx" target="_blank">Department for Digital Humanities</a>, King’s College London (UK)
-                            </li>
-                            <li>
-                                <a href="http://lilianabounegru.org/" target="_blank">Liliana Bounegru</a>, University of Ghent (BE) + University of Groningen (NL)
-                            </li>
-                            <li>
-                                <a href="https://www.uni-siegen.de/phil/medienwissenschaft/personal/lehrende/gerlitz_carolin/" target="_blank">Carolin Gerlitz</a>, <a href="https://www.mediacoop.uni-siegen.de/en/" target="_blank">Media of Cooperation</a>, University of Siegen (DE)
-                            </li>
-                            <li>
-                                <a href="https://www.kcl.ac.uk/artshums/depts/ddh/people/academic/gray.aspx" target="_blank">Jonathan Gray</a>, <a href="https://www.kcl.ac.uk/artshums/depts/ddh/index.aspx" target="_blank">Department for Digital Humanities</a>, King's College London (UK)
-                            </li>
-                            <li>
-                                <a href="http://www.medialab.sciences-po.fr/people/mathieu-jacomy/" target="_blank">Mathieu Jacomy</a>, <a href="http://www.medialab.sciences-po.fr/" target="_blank">médialab</a>, Sciences Po Paris (FR)
-                            </li>
-                            <li>
-                                <a href="http://www.arts.ac.uk/research/ual-staff-researchers/a-z/professor-lucy-kimbell/" target="_blank">Lucy Kimbell</a>, <a href="http://www.arts.ac.uk/research/ual-research-centres/innovation-insights-hub/" target="_blank">Innovation Insights Hub</a>, University of the Arts London (UK)
-                            </li>
-                            <li>
-                                <a href="http://personprofil.aau.dk/129860?lang=en#/minside" target="_blank">Anders Koed Madsen</a>, <a href="http://www.tantlab.aau.dk/" target="_blank">Techno-Anthropology Lab</a>, Aalborg University Copenhagen (DK)
-                            </li>
-                            <li>
-                                <a href="https://www2.warwick.ac.uk/fac/cross_fac/cim/people/noortje-marres/" target="_blank">Noortje Marres</a>, <a href="http://www2.warwick.ac.uk/fac/cross_fac/cim/" target="_blank">Centre for Interdisciplinary Methodologies (CIM)</a>, University of Warwick (UK)
-                            </li>
-                            <li>
-                                <a href="http://www.densitydesign.org/person/michele-mauri/" target="_blank">Michele Mauri</a>, <a href="http://www.densitydesign.org/" target="_blank">Density Design</a>, Politecnico of Milano (IT)
-                            </li>
-                            <li>
-                                <a href="http://vbn.aau.dk/en/persons/anders-kristian-munk(d276c50a-ef47-4fdf-be72-9fab31d7e8e7).html" target="_blank">Anders Munk</a>, <a href="http://www.tantlab.aau.dk/" target="_blank">Techno-Anthropology Lab</a>, Aalborg University Copenhagen (DK)
-                            </li>
-                            <li>
-                                <a href="http://www.niederer.info/" target="_blank">Sabine Niederer</a>, <a href="http://www.citizendatalab.org/" target="_blank">Citizen Data Lab</a>, Amsterdam University of Applied Sciences (NL)
-                            </li>
-                            <li>
-                                <a href="https://unige.ch/gsi/fr/enseignants/cer/kari-de-pryck/" target="_blank">Kari de Pryck</a>, <a href="https://www.unige.ch/gsi/en/" target="_blank">Global Study Institute</a>, Université de Genève (CH)
-                            </li>
-                            <li>
-                                <a href="http://www.uva.nl/over-de-uva/organisatie/medewerkers/content/r/o/r.a.rogers/r.a.rogers.html" target="_blank">Richard Rogers</a>, <a href="http://digitalmethods.net" target="_blank">Digital Methods Initiative</a>, University of Amsterdam (NL)
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/alvpinastranger" target="_blank">Alvaro Pina Stranger</a>, Université de Rennes 1 (FR)
-                            </li>
-                            <li>
-                                <a href="http://tommasoventurini.it" target="_blank">Tommaso Venturini</a>, <a href="http://www.ixxi.fr/" target="_blank">Institute of Complex Systems</a>, University of Lyon, INRIA, ENS de Lyon, CNRS, UCB Lyon 1 (FR)
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<!-- FOLLOW US -->
+		<div id="follow-us">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12">
+						<h1>Keep in touch</h1>
+						<p>
+							Sign up below to get updates about our projects and activities.
+						</p>
+					</div>
+				</div>
+				<!-- Mailchimp code -->
+				<div class="row">
+					<div class="col-md-4 col-md-offset-2 col-sm-12">
+						<div id="mc_embed_signup">
+							<form action="//publicdatalab.us14.list-manage.com/subscribe/post?u=d40e560175082c95b321ed8e3&amp;id=3fd6102ab0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+								<div id="mc_embed_signup_scroll">
+									<div class="mc-field-group">
+										<label for="mce-EMAIL">Email Address</label>
+										<input type="email" value="" name="EMAIL" class="mailchimp-fields" class="required email" id="mce-EMAIL" placeholder="Enter your email address...">
+									</div>
+										<div class="mc-field-group">
+											<label for="mce-FNAME">First Name </label>
+											<input type="text" value="" name="FNAME" class="mailchimp-fields" id="mce-FNAME" placeholder="Your first name">
+									</div>
+											<div class="mc-field-group">
+												<label for="mce-LNAME">Last Name </label>
+												<input type="text" value="" name="LNAME" class="mailchimp-fields" id="mce-LNAME" placeholder="Your last name">
+									</div>
+												<div id="mce-responses" class="clear">
+													<div class="response" id="mce-error-response" style="display:none"></div>
+													<div class="response" id="mce-success-response" style="display:none"></div>
+												</div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+												<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_d40e560175082c95b321ed8e3_3fd6102ab0" tabindex="-1" value=""></div>
+													<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+													</div>
+							</form>
+						</div>
+						<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+						<script type='text/javascript'>
+							(function($) {
+								window.fnames = new Array();
+								window.ftypes = new Array();
+								fnames[0] = 'EMAIL';
+								ftypes[0] = 'email';
+								fnames[1] = 'FNAME';
+								ftypes[1] = 'text';
+								fnames[2] = 'LNAME';
+								ftypes[2] = 'text';
+							}(jQuery));
+							var $mcj = jQuery.noConflict(true);
+						</script>
+						<!--End mc_embed_signup-->
+					</div>
+				</div>
+				<!-- Mailchimp end -->
+			</div>
+		</div>
+ˇ
 
+		<!-- jQuery -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js"></script>
 
-        <!-- jQuery -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <!-- Bootstrap Core JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- Scrolling Nav JavaScript -->
+		<script src="js/jquery.easing.min.js"></script>
+		<script src="js/scrolling-nav.js"></script>
 
-        <!-- Scrolling Nav JavaScript -->
-        <script src="js/jquery.easing.min.js"></script>
-        <script src="js/scrolling-nav.js"></script>
+		<!-- Analytics -->
+		<script>
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        <!-- Analytics -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-96511985-1', 'auto');
-          ga('send', 'pageview');
-
-        </script>
+			ga('create', 'UA-96511985-1', 'auto');
+			ga('send', 'pageview');
+		</script>
 
 </body>
+
 </html>

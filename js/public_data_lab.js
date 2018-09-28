@@ -38,7 +38,7 @@ function setup() {
 function draw() {
 
   //console.log(touches.length);
-  
+
   if((mouseIsPressed && mouseButton == LEFT) || touches.length > 0) {
 
     if(curSize > 0.1) {
@@ -60,7 +60,7 @@ function draw() {
   var distScale = curSize/maxSize;
 
   handleEnvironment();
-  //for each particle set the position 
+  //for each particle set the position
   for (i = 0; i < chunks.length; i++) {
 
     var chunk = chunks[i];

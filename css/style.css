@@ -4,7 +4,7 @@ body {
     background-color: #EBFF00;
     font-family: 'Inconsolata', monospace;
     font-size: 18px;
-    border-bottom: 20px solid #000; 
+    border-bottom: 20px solid #000;
     padding-bottom: 4em;
 }
 
@@ -51,6 +51,19 @@ em {
 
 img {
     width: 100%;
+}
+
+#projects img {
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter:contrast(200%)  grayscale(100%);
+	/* mix-blend-mode: multiply; */
+	transition: 1s filter linear, 1s -webkit-filter linear;
+}
+
+#projects img:hover {
+	mix-blend-mode: multiply;
+	filter: none;
+	-webkit-filter: grayscale(0%);
 }
 
 .pdl-logo {
